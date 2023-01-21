@@ -735,7 +735,7 @@ const data = [
   }
 ]
 
-export const htmlConfig = {
+export const config = {
   data,
   resources
 }

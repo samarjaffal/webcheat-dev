@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { pagesConfig } from '../../config/pagesConfig';
+
+export function getStaticPaths() {
+	const pages = Object.entries(pagesConfig);
+
+	const paths = pages.map(([category, technologies]) =>
+		technologies.map((technology) => ({ params: { technology, category } }))
+	);
+
+	return paths.flat();
+}
+
+const { technology, category } = Astro.params;
+
+const path = `../../data/${category}/${technology}.js`;
+const { config } = await import(path);
+---
+
+<Layout title={`WebCheat - ${technology}`}>
+	<h1>{technology}</h1>
+	{JSON.stringify(config)}
+</Layout>
