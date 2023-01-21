@@ -1,8 +1,8 @@
 const resources = [
-    'https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf',
-    'https://www.pinterest.com/pin/191332684147746741/', 
-    'https://www.w3schools.com/tags/ref_byfunc.asp',
-] 
+  'https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf',
+  'https://www.pinterest.com/pin/191332684147746741/',
+  'https://www.w3schools.com/tags/ref_byfunc.asp'
+]
 
 const data = [
   {
@@ -39,7 +39,7 @@ const data = [
       },
       {
         name: 'h[1-6]',
-        secondName: 'Heading Tag', 
+        secondName: 'Heading Tag',
         description: 'The <h1> to <h6> HTML elements represent six levels of section headings. <h1> is the highest section level and <h6> is the lowest.',
         usage: '<h1>Hello World!</h1>, <h2>Hello World!</h2>, ... , <h6>Hello World!</h6>',
         urls: ['https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements']
@@ -318,7 +318,7 @@ const data = [
         name: 'picture',
         secondName: 'Picture Tag',
         description: 'The <picture> HTML element contains zero or more <source> elements and one <img> element to offer alternative versions of an image for different display/device scenarios.',
-        usage: '<picture><source media="(min-width: 650px)" srcset="img_pink_flowers.jpg"><source media="(min-width: 465px)" srcset="img_white_flower.jpg"><img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"></picture>',
+        usage: '<picture><source media="(min-width: 650px)" srcset="img_pink_flowers.jpg"><source media="(min-width: 465px)" srcset="img_white_flower.jpg"><img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"></picture>'
       },
       {
         name: 'svg',
@@ -627,7 +627,7 @@ const data = [
         secondName: 'Article Tag',
         description: 'The <article> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication).',
         usage: '<article> <h1>My Website</h1> <p>Some text about the site.</p> </article>',
-        urls: ['https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article'],
+        urls: ['https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article']
       },
       {
         name: 'aside',
@@ -661,13 +661,13 @@ const data = [
         name: 'data',
         secondName: 'Data Tag',
         description: 'The <data> HTML element links a given content with a machine-readable translation. If the content is time- or date-related, the <time> element must be used.',
-        usage: '<data value="42">The answer to life, the universe, and everything</data>',
+        usage: '<data value="42">The answer to life, the universe, and everything</data>'
       }
     ]
   },
   {
     title: 'Meta Information',
-    description:'',
+    description: '',
     properties: [
       {
         name: 'head',
@@ -694,7 +694,7 @@ const data = [
   },
   {
     title: 'Programming',
-    description:'',
+    description: '',
     properties: [
       {
         name: 'script',
