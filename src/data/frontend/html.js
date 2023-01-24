@@ -736,6 +736,7 @@ const data = [
 ]
 
 export const config = {
+  name: 'html',
   data,
   resources
 }
