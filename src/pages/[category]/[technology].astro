@@ -1,9 +1,8 @@
 ---
-import glob from 'tiny-glob';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-	const paths = await glob('src/data/*/*');
+	const paths = Object.keys(import.meta.glob('../../data/*/*'));
 	const technologies = await Astro.glob('../../data/*/*.js');
 
 	const newPaths = paths.map((file) => {
@@ -17,7 +16,7 @@ export async function getStaticPaths() {
 const { technology, category } = Astro.params;
 const { technologies } = Astro.props;
 
-const { config: technologyData } = technologies.find((tech) => tech.config.name === technology);
+const { config: technologyData } = technologies.find((tech) => tech.config?.name === technology);
 ---
 
 <Layout title={`WebCheat - ${technology}`}>
