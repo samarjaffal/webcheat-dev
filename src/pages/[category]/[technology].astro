@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
 
 export async function getStaticPaths() {
 	const paths = Object.keys(import.meta.glob('../../data/*/*'));
@@ -20,6 +21,12 @@ const { config: technologyData } = technologies.find((tech) => tech.config?.name
 ---
 
 <Layout title={`WebCheat - ${technology}`}>
-	<h1>{technology}</h1>
-	{JSON.stringify(technologyData)}
+	<!-- {JSON.stringify(technologyData)} -->
+	<div class="columns-3 space-y-5 p-5">
+		{
+			technologyData?.data?.map((tech) => {
+				return <Card technology={tech} />;
+			})
+		}
+	</div>
 </Layout>
