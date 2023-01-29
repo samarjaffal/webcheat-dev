@@ -15,11 +15,11 @@ const { title, description, properties } = technology;
 			properties.map((property) => {
 				return (
 					<div class="my-3">
-						<button>
+						<button class="button-property bg-[#EDEDEE] hover:bg-[#ff70a64D] p-2 rounded-xl w-full text-left transition ease-in-out duration-300">
 							<p class="font-semibold text-md">{property.name}</p>
 						</button>
-						<p class="text-base text-gray-700 my-2">{property.description}</p>
-						<div>
+						<div class="content hidden bg-[#EDEDEE] p-3 rounded-xl mt-3">
+							<p class="text-base text-gray-700 my-2">{property.description}</p>
 							<p class="font-semibold text-md mb-2">Usage</p>
 							<div class="bg-gray-200 rounded-md p-4">
 								<code class="text-sm break-words">{property.usage}</code>
@@ -31,3 +31,21 @@ const { title, description, properties } = technology;
 		}
 	</div>
 </article>
+
+<script>
+	function handleClick() {
+		const button = this;
+		const colorDefault = '#EDEDEE';
+		const colorActive = '#ff70a64D';
+
+		button.classList.toggle(`bg-[${colorDefault}]`);
+		button.classList.toggle(`bg-[${colorActive}]`);
+
+		const content = button.nextElementSibling;
+		content.classList.toggle('hidden');
+	}
+
+	const buttons = document.querySelectorAll('button.button-property');
+
+	buttons.forEach((button) => button.addEventListener('click', handleClick));
+</script>
