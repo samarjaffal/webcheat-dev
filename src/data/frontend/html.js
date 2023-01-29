@@ -1,3 +1,5 @@
+import { getRandomColor } from '../../utils/getRandomColor'
+
 const resources = [
   'https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf',
   'https://www.pinterest.com/pin/191332684147746741/',
@@ -8,6 +10,7 @@ const data = [
   {
     title: 'Basic Structure',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'DOCTYPE',
@@ -77,6 +80,7 @@ const data = [
   {
     title: 'Formatting',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'b',
@@ -223,6 +227,7 @@ const data = [
   {
     title: 'Lists Tags',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'ul',
@@ -271,6 +276,7 @@ const data = [
   {
     title: 'Images and Multimedia',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'img',
@@ -332,6 +338,7 @@ const data = [
   {
     title: 'Audio / Video',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'audio',
@@ -366,6 +373,7 @@ const data = [
   {
     title: 'Links',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'a',
@@ -393,6 +401,7 @@ const data = [
   {
     title: 'Forms',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'form',
@@ -483,6 +492,7 @@ const data = [
   {
     title: 'Tables ',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'table',
@@ -559,6 +569,7 @@ const data = [
   {
     title: 'Frames',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'iframe',
@@ -572,6 +583,7 @@ const data = [
   {
     title: 'Styles and Semantics',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'style',
@@ -668,6 +680,7 @@ const data = [
   {
     title: 'Meta Information',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'head',
@@ -695,6 +708,7 @@ const data = [
   {
     title: 'Programming',
     description: '',
+    color: getRandomColor(),
     properties: [
       {
         name: 'script',
