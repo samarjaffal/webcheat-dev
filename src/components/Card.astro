@@ -27,6 +27,13 @@ const { title, description, properties, color } = technology;
 							<div class="bg-gray-200 rounded-md p-4">
 								<code class="text-sm break-words">{property.usage}</code>
 							</div>
+							<a
+								href={property.url}
+								target="_blank"
+								class={`text-[${color}] font-bold text-xs hover:underline`}
+							>
+								Go to documentation
+							</a>
 						</div>
 					</div>
 				);
