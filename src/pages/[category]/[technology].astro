@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import { chunk } from '../../utils/others';
 
 export async function getStaticPaths() {
 	const paths = Object.keys(import.meta.glob('../../data/*/*'));
@@ -17,15 +18,22 @@ export async function getStaticPaths() {
 const { technology, category } = Astro.params;
 const { technologies } = Astro.props;
 
-const { config: technologyData } = technologies.find((tech) => tech.config?.name === technology);
+const { config } = technologies.find((tech) => tech.config?.name === technology);
+const size = Math.round(config.data.length / 3);
+const technologyData = chunk(config.data, size);
 ---
 
 <Layout title={`WebCheat - ${technology}`}>
-	<!-- {JSON.stringify(technologyData)} -->
-	<div class="columns-3 space-y-5 p-5">
+	<div class="flex w-full gap-3 px-10 py-4">
 		{
-			technologyData?.data?.map((tech) => {
-				return <Card technology={tech} />;
+			technologyData.map((column) => {
+				return (
+					<div class="w-2/6">
+						{column.map((tech) => {
+							return <Card technology={tech} />;
+						})}
+					</div>
+				);
 			})
 		}
 	</div>
