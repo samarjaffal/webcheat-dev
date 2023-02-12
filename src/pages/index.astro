@@ -1,10 +1,41 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Hero from '@components/Hero.astro';
+import Technologies from '@components/sections/Technologies.astro';
 ---
 
 <Layout title="WebCheat - Home">
 	<main>
 		<Hero />
+		<Technologies />
 	</main>
+	<footer class="p-12 mt-20 bg-[#FF70A64D]">
+		<div class="text-center">
+			<p>
+				Developed by: <a class="font-semibold" href="https://github.com/samarjaffal" target="_blank"
+					>Samar Jaffal</a
+				>
+			</p>
+			<p class="mt-3">
+				Made with love and Javascript
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-heart-filled inline-block"
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					fill="#FF70A6"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+					<path
+						d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+						fill="#FF70A6"></path>
+				</svg>
+			</p>
+		</div>
+	</footer>
 </Layout>

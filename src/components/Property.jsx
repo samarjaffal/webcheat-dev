@@ -3,7 +3,7 @@ import { useState } from 'react'
 export function Property ({ name, description, usage, url, color }) {
   const [showContent, setShowContent] = useState(false)
 
-  const colorDefault = '#EDEDEE'
+  const colorDefault = '#f7f7f8'
   const colorActive = `${color}4D`
 
   const handleClick = () => setShowContent(!showContent)
@@ -18,7 +18,7 @@ export function Property ({ name, description, usage, url, color }) {
       </button>
       {
         showContent && (
-          <div className='content bg-[#EDEDEE] p-3 rounded-xl mt-3'>
+          <div className='content bg-[#f7f7f8] p-3 rounded-xl mt-3'>
             <p className='text-base text-gray-700 my-2'>{description}</p>
             <p className='font-semibold text-md mb-2'>Usage</p>
             <div className='bg-gray-200 rounded-md p-4'>

@@ -1,0 +1,36 @@
+---
+import HtmlIcon from '@components/icons/html.astro';
+import HomeTechnologyCard from '@components/HomeTechnologyCard.astro';
+---
+
+<section class="mt-20 text-center max-w-4xl mx-auto p-5">
+	<h2 class="text-5xl font-black">Technologies</h2>
+	<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+		<HomeTechnologyCard
+			name="HTML"
+			description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, nisi."
+			color="bg-[#70D6FF4D]"
+			url="/frontend/html"
+		>
+			<HtmlIcon slot="icon" />
+		</HomeTechnologyCard>
+
+		<HomeTechnologyCard
+			name="HTML"
+			description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, nisi."
+			color="bg-[#70D6FF4D]"
+			url="/frontend/html"
+		>
+			<HtmlIcon slot="icon" />
+		</HomeTechnologyCard>
+
+		<HomeTechnologyCard
+			name="HTML"
+			description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, nisi."
+			color="bg-[#70D6FF4D]"
+			url="/frontend/html"
+		>
+			<HtmlIcon slot="icon" />
+		</HomeTechnologyCard>
+	</div>
+</section>
