@@ -1,16 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Wave from '@components/icons/wave.astro';
+import Hero from '@components/Hero.astro';
 ---
 
 <Layout title="WebCheat - Home">
-	<main class="bg-[#70D6FF] min-h-screen flex flex-col justify-center items-center relative">
-		<div class="text-center">
-			<h1 class="text-7xl font-black">Webcheat</h1>
-			<p class="mt-3 text-xl text-gray-700">Webcheat is a collection of cheatsheets for web development.</p>
-		</div>
-		<div class="absolute w-full bottom-0">
-			<Wave />
-		</div>
+	<main>
+		<Hero />
 	</main>
 </Layout>

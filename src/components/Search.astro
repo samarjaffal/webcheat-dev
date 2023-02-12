@@ -1,0 +1,56 @@
+---
+import Cancel from '@components/icons/cancel.astro';
+---
+
+<form class="relative" role="search">
+	<div>
+		<input
+			type="search"
+			class="input-search w-full mt-5 px-4 py-2 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFD670] focus:ring-opacity-50 pl-12"
+			placeholder="Search for: Html, Css, Javascript, etc."
+		/>
+		<button type="reset" class="absolute right-4 top-7 w-6 hidden">
+			<Cancel />
+		</button>
+	</div>
+</form>
+
+<style>
+	div::before {
+		content: '';
+		position: absolute;
+		top: 26px;
+		left: 15px;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-image: url('/assets/icons/search.svg');
+		background-repeat: no-repeat;
+	}
+	input[type='search']::-webkit-search-cancel-button {
+		display: none;
+	}
+</style>
+
+<script type="module">
+	const input = document.querySelector('input[type="search"]');
+	const reset = document.querySelector('button[type="reset"]');
+
+	function resetInput() {
+		input.value = '';
+		handleReset();
+	}
+
+	function handleReset() {
+		const hasValue = input.value.length > 0;
+		if (!hasValue) {
+			reset.classList.add('hidden');
+			reset.classList.remove('block');
+			return;
+		}
+		reset.classList.remove('hidden');
+		reset.classList.add('block');
+	}
+
+	input.addEventListener('input', handleReset);
+	reset.addEventListener('click', resetInput);
+</script>
