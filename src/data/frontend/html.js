@@ -9,7 +9,7 @@ const resources = [
 const data = [
   {
     title: 'Basic Structure',
-    description: '',
+    description: 'Lorem impsum dolor',
     color: getRandomColor(),
     properties: [
       {
@@ -752,5 +752,6 @@ const data = [
 export const config = {
   name: 'html',
   data,
-  resources
+  resources,
+  description: 'HTML is the standard markup language for creating Web pages.'
 }

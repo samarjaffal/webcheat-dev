@@ -1,18 +1,16 @@
 ---
-import HtmlIcon from '@components/icons/html.astro';
-
-const { name, description, color, url, icon } = Astro.props;
+const { name, description, color, url } = Astro.props;
 ---
 
 <a href={url}>
 	<article
 		class={`max-w-[260px] bg-[#f7f7f8] p-10 rounded-xl hover:${color} transition ease-in-out duration-300 mx-auto`}
 	>
-		<figure>
-			<slot name="icon" />
+		<figure class="inline-block mx-auto">
+			<img src={`/assets/icons/${name}.svg`} alt={`This is an icon for ${name}`} />
 		</figure>
 		<div class="mt-2">
-			<strong class="text-2xl">{name}</strong>
+			<strong class="text-2xl uppercase">{name}</strong>
 			<p class="text-gray-700 mt-2">{description}</p>
 		</div>
 	</article>
