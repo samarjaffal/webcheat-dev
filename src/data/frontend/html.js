@@ -1,4 +1,4 @@
-import { getRandomColor } from '../../utils/getRandomColor'
+import { getRandomColor } from '@utils/getRandomColor'
 
 const resources = [
   'https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf',

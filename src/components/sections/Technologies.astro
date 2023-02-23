@@ -10,7 +10,7 @@ const newTechs = getTechnologiesHome({ paths, technologies });
 
 <section class="mt-20 text-center max-w-4xl mx-auto p-5">
 	<h2 class="text-5xl font-black">Technologies</h2>
-	<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+	<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
 		{
 			newTechs.map((tech) => (
 				<HomeTechnologyCard name={tech.name} color={tech.color} url={tech.url} description={tech.description} />

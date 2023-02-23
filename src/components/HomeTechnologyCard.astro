@@ -4,7 +4,7 @@ const { name, description, color, url } = Astro.props;
 
 <a href={url}>
 	<article
-		class={`max-w-[260px] bg-[#f7f7f8] p-10 rounded-xl hover:${color} transition ease-in-out duration-300 mx-auto`}
+		class={`max-w-[260px] bg-[#f7f7f8] p-10 rounded-xl hover:${color} transition ease-in-out duration-300 mx-auto h-full`}
 	>
 		<figure class="inline-block mx-auto">
 			<img src={`/assets/icons/${name}.svg`} alt={`This is an icon for ${name}`} />
