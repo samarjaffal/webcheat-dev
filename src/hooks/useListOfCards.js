@@ -15,7 +15,7 @@ export function useListOfCards ({ tecnhologies }) {
     if (sizes.isMD) newColumns = 2
     if (sizes.isSM || sizes.isXS) newColumns = 1
 
-    const columns = tecnhologies.length <= newColumns
+    const columns = tecnhologies.length < newColumns
       ? newColumns
       : Math.round(tecnhologies.length / newColumns)
 
