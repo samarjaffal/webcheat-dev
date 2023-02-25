@@ -47,7 +47,7 @@ const data = [
       },
       {
         name: 'font',
-        secondName:'Font',
+        secondName: 'Font',
         description: 'Sets all the different properties of an element\'s font',
         usage: 'font: 1.2em "Fira Sans", sans-serif;',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/font'
@@ -75,7 +75,7 @@ const data = [
       },
       {
         name: 'vertical-align',
-        secondName: 'Vertical Align', 
+        secondName: 'Vertical Align',
         description: 'Used to alter the vertical positioning of an inline element, relative to its parent element or to the element\'s line.',
         usage: 'vertical-align: middle;',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align'
@@ -91,7 +91,7 @@ const data = [
         name: 'text-transform',
         secondName: 'Text Transform',
         description: 'Allows for capitalizing the first letter of each word (capitalize), capitalizing all letters of a word (uppercase), using all small letters in each word(lowercase), and the inital value(none).',
-        usage:'text-transform: uppercase;',
+        usage: 'text-transform: uppercase;',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform'
       },
       {
