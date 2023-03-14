@@ -7,7 +7,7 @@ const resources = [
 const data = [
   {
     title: 'Selectors',
-    description: 'Lorem impsum dolor',
+    description: '',
     color: getRandomColor(),
     properties: [
       {
@@ -39,32 +39,200 @@ const data = [
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
       },
       {
-        name: 'Descendant Selector',
+        name: 'Universal Selector',
+        secondName: '*',
+        description: 'Selects all elements',
+        usage: '* { font-size: 18px; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors'
+      }
+    ]
+  },
+  {
+    title: 'Combinators',
+    description: '',
+    color: getRandomColor(),
+    properties: [
+      {
+        name: 'Descendant Combinator',
         secondName: 'div p',
-        description: 'Selects all <p> elements inside a <div> element',
+        description: 'Selects all <p> elements that are descendants of a <div> element',
         usage: 'div p { font-size: 18px; }',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator'
       },
       {
-        name: 'Child Selector',
+        name: 'Child Combinator',
         secondName: 'ul > li',
         description: 'Selects all <li> elements that are direct children of a <ul> element',
         usage: 'ul > li { font-weight: bold; }',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator'
       },
       {
-        name: 'Adjacent Sibling Selector',
+        name: 'Adjacent Sibling Combinator',
         secondName: 'h1 + p',
         description: 'Selects the <p> element that is immediately after an <h1> element',
         usage: 'h1 + p { color: purple; }',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator'
       },
       {
-        name: 'General Sibling Selector',
+        name: 'General Sibling Combinator',
         secondName: 'h1 ~ p',
         description: 'Selects all <p> elements that are siblings of an <h1> element',
         usage: 'h1 ~ p { font-style: italic; }',
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator'
+      },
+      {
+        name: 'Column Combinator',
+        secondName: 'col.selected||td',
+        description: 'Select all table cells that belong to the "selected" column',
+        usage: 'col.selected||td { background-color: yellow; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Column_combinator'
+      },
+      {
+        name: 'Selector List',
+        secondName: 'h1, h2, h3',
+        description: 'Selects all <h1>, <h2>, and <h3> elements (comma-separated list of selectors)',
+        usage: 'h1, h2, h3 { color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list'
+      }
+    ]
+  },
+  {
+    title: 'Pseudo-classes',
+    description: '',
+    color: getRandomColor(),
+    properties: [
+      {
+        name: ':active',
+        secondName: '',
+        description: 'Represents an element (such as a button or an anchor) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button',
+        usage: 'a:active { color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:active'
+      },
+      {
+        name: ':checked',
+        secondName: '',
+        description: 'Represents any radio, checkbox, or option element that is checked or toggled to an on state.',
+        usage: 'input:checked { border: none; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:checked'
+      },
+      {
+        name: ':disabled',
+        secondName: '',
+        description: 'Represents any disabled element',
+        usage: 'input:disabled { background-color: yellow; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled'
+      },
+      {
+        name: ':empty',
+        secondName: '',
+        description: 'Represents any element that has no children at all',
+        usage: 'div:empty { outline: 2px solid deeppink; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:empty'
+      },
+      {
+        name: ':enabled',
+        secondName: '',
+        description: 'Represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus',
+        usage: 'input:enabled { background-color: yellow; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled'
+      },
+      {
+        name: ':first-child',
+        secondName: '',
+        description: 'Represents any element that is the first child of its parent',
+        usage: 'p:first-child { color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child'
+      },
+      {
+        name: ':first-of-type',
+        secondName: '',
+        description: 'Represents any element that is the first sibling of its type in the list of children of its parent element',
+        usage: 'p:first-of-type { color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type'
+      },
+      {
+        name: ':focus',
+        secondName: '',
+        description: 'Represents any element that currently has focus',
+        usage: 'input:focus { background-color: yellow; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:focus'
+      },
+      {
+        name: ':hover',
+        secondName: '',
+        description: 'Represents any element that is being hovered by the cursor',
+        usage: 'a:hover { color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:hover'
+      },
+      {
+        name: ':target',
+        secondName: '',
+        description: 'Represents any element that is the target of the current URI fragment identifier',
+        usage: 'a:target { color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/:target'
+      }
+    ]
+  },
+  {
+    title: 'Attribute Selectors',
+    description: '',
+    color: getRandomColor(),
+    properties: [
+      {
+        name: '[attr=value]',
+        secondName: '',
+        description: 'Represents elements with an attribute name of attr whose value is exactly value.',
+        usage: 'a[href="https://example.org"]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr~=value]',
+        secondName: '',
+        description: 'Represents elements with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly value.',
+        usage: 'a[href~="https://example.org"]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr|=value]',
+        secondName: '',
+        description: 'Matches all elements whose attribute value beginning with exactly "value" word immediately followed by "-"',
+        usage: 'a[href|="https://example.org"]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr^=value]',
+        secondName: '',
+        description: 'Represents elements with an attribute name of attr whose value is prefixed (preceded) by value.',
+        usage: 'a[href^="https://example.org"]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr$=value]',
+        secondName: '',
+        description: 'Represents elements with an attribute name of attr whose value is suffixed (followed) by value.',
+        usage: 'a[href$="https://example.org"]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr*=value]',
+        secondName: '',
+        description: 'Represents elements with an attribute name of attr whose value contains at least one occurrence of value.',
+        usage: 'a[href*="https://example.org"]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr operator value i]',
+        secondName: '',
+        description: 'Adding an i (or I) before the closing bracket causes the value to be compared case-insensitively. ',
+        usage: 'a[href*="insensitive" i]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
+      },
+      {
+        name: '[attr operator value s]',
+        secondName: '',
+        description: 'Adding an s (or S) before the closing bracket causes the value to be compared case-sensitively.',
+        usage: 'a[href*="cAsE" s]{ color: red; }',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'
       }
     ]
   },
